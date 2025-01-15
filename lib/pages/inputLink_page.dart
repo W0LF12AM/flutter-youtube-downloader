@@ -42,10 +42,14 @@ class InputlinkPage extends StatelessWidget {
             //button
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacement(
+                String link = linkController.text;
+
+                Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => DatashowPage(link: ,)));
+                        builder: (BuildContext context) => DatashowPage(
+                              link: link,
+                            )));
               },
               child: Container(
                 height: MediaQuery.sizeOf(context).height * 0.06,
